@@ -1,6 +1,145 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 전체레이아웃 */
+.wrap {
+  width: 1200px;
+  margin: auto;
+  background-color: aliceblue;
+}
+/* 상단 */
+.header {
+  height: 100px;
+  display: flex;
+  background-color: #11531b;
+  align-items: center;
+  text-align: center;
+}
+/* 로고 */
+.logo {
+  width: 300px;
+  font-size: 35px;
+  color: #fff;
+  font-family: georgia, "times new roman", times, serif;
+  font-weight: bold;
+  /* background-color: aquamarine; */
+}
+.logo > a {
+  color: #fff;
+}
+/* 메뉴 */
+.menu {
+  position: relative;
+  width: 1000px;
+  height: 100px;
+  background-color: #11531b;
+}
+#top-menu {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  display: flex;
+  width: 800px;
+  background-color: rgb(31, 163, 59);
+}
+#top-menu > li {
+  width: calc(100% / 4);
+}
+#top-menu > li > a {
+  display: block;
+  line-height: 60px;
+}
+#top-menu > li > a:hover {
+  background-color: rgb(255, 166, 0);
+  color: #287511;
+}
+/* 메인 */
+.main {
+  width: 100%;
+  padding: 40px;
+  background-color: rgb(239, 255, 224);
+}
+.box {
+  margin-top: 20px;
+  /* background-color: aqua; */
+}
+.desc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* 이미지 */
+.desc-img {
+  width: 500px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.desc-img > img {
+  display: block;
+  width: 500px;
+  transition: all 0.3s;
+}
+.desc-img > img:hover {
+  transform: scale(1.2);
+  filter: blur(2px);
+}
+/* 설명 */
+.txt {
+  width: 600px;
+  margin-left: 20px;
+  /* background-color: coral; */
+}
+.txt-2 {
+  margin-top: 15px;
+}
+p {
+  margin-top: 15px;
+}
+.txt-box2 {
+  margin-top: 15px;
+}
+/* 하단 */
+.footer {
+  position: relative;
+  width: 1200px;
+  height: 100px;
+  border-top: 1px solid #333;
+  background-color: aliceblue;
+}
+.footer-menu {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+.footer-menu > li > a {
+  position: relative;
+  padding: 0 15px;
+}
+.footer-menu > li > a:hover{
+    text-decoration: underline;
+}
+.footer-menu > li > a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #b9b9b9;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+}
+.footer-menu > li:last-child > a::after{
+    content: none;
 }
